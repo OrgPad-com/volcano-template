@@ -1,0 +1,16 @@
+{:source-paths ["src"]
+ :dependencies [[reagent "0.10.0"]
+                [bidi "2.1.6"]
+                [venantius/accountant "0.2.5"]
+                [binaryage/devtools "0.9.10"]
+                [orgpad/volcano "0.1.0-SNAPSHOT"]]
+ :nrepl        {:port 9500}
+ :builds       {:web {:target     :browser
+                      :output-dir "resources/js"
+                      :asset-path "/js"
+                      :modules    {:main {:init-fn my-web.dev/init}}
+                      :devtools   {:http-root      "resources"
+                                   :http-port      3500
+                                   :after-load     my-web.dev/mount-root
+                                   :watch-dir      "resources"
+                                   :browser-inject :main}}}}

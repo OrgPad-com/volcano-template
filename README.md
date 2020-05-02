@@ -9,7 +9,8 @@ To generate, run
 
 ```lein new volcano <your-project>```
 
-See README.md inside for instructions how to run Volcano.
+You can also add CSS generation by adding one of the options `+less` or `+garden`. See README.md inside for instructions
+how to run Volcano.
 
 ## License
 

@@ -2,9 +2,8 @@
 /target
 /*-init.clj
 /resources/js
-{{#garden?}}/resources/css
-{{/garden?}}{{#less?}}/resources/css
-{{/less?}}/build
+/resources/css
+/build
 out
 **/*.iml
 /.idea
