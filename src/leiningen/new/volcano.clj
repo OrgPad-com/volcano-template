@@ -27,6 +27,7 @@
              ["src/{{sanitized}}/pages/contact.cljc" (render "pages/contact.cljc" data)]
              ["src/{{sanitized}}/pages/index.cljc" (render "pages/index.cljc" data)]
              ["resources/index.html" (render "resources/index.html" data)]
+             [".gitignore" (render ".gitignore" data)]
              ["package.json" (render "package.json" data)]
              ["project.clj" (render "project.clj" data)]
              ["README.md" (render "README.md" data)]

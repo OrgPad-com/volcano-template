@@ -1,0 +1,13 @@
+/*.log
+/target
+/*-init.clj
+/resources/js
+/build
+out
+**/*.iml
+/.idea
+/.shadow-cljs
+/node_modules
+/.lein-*
+/.nrepl-port
+/.cpcache/
