@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "shadow-cljs": "{{shadow-cljs-version}}"
+  },
+  "dependencies": {
+    "create-react-class": "{{create-react-class-version}}",
+    "react": "{{react-version}}",
+    "react-dom": "{{react-dom-version}}"
+  }
+}
