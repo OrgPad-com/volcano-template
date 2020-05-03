@@ -28,4 +28,7 @@
          :target-path  "resources/css"}
 {{/less?}}
 
-  :clean-targets ^{:protect false} ["resources/js" "target"])
+  :clean-targets ^{:protect false} ["resources/js" "target" {{#garden?}}"resources/css"{{/garden?}}{{#less?}}"resources/css"{{/less?}}]
+
+{{#garden?}}  :profiles {:dev {:prep-tasks [["garden" "once"]]}}
+{{/garden?}}{{#less?}}  :profiles {:dev {:prep-tasks [["less" "once"]]}}{{/less?}})
