@@ -3,4 +3,6 @@
   :url "https://github.com/OrgPad-com/volcano-template"
   :license {:name "The MIT License"
             :url  "http://opensource.org/licenses/MIT"}
-  :eval-in-leiningen true)
+  :eval-in-leiningen true
+  :deploy-repositories [["clojars" {:sign-releases false
+                                    :url           "https://clojars.org/repo"}]])
