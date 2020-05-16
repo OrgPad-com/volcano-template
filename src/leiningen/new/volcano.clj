@@ -25,7 +25,7 @@
               :less?                      (= css :less)
               :garden?                    (= css :garden)
               :css?                       (= css :none)
-              :volcano-version            "0.1.1"
+              :volcano-version            "0.1.2"
               :reagent-version            "0.10.0"
               :bidi-version               "2.1.6"
               :accountant-version         "0.2.5"
