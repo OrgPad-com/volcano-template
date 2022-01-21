@@ -46,7 +46,10 @@ Changes in `resources/css/{{name}}.css` are immediately shown in the browser.
 When we are finished with the state in development, we build the static web by running
 
 ```shell script
-lein run
+{{#garden?}}lein garden once
+{{/garden?}}{{#less?}}lein less once
+{{/less?}}shadow-cljs release build
+node target/build
 ```
 
 The website is build in the directory `build`.

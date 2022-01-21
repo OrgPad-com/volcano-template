@@ -2,5 +2,5 @@
   (:require [volcano.build :as build]
             [{{name}}.config :as config]))
 
-(defn -main [& args]
+(defn build []
   (build/build-web! (config/config)))

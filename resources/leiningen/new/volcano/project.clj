@@ -9,13 +9,9 @@
                  [orgpad/volcano "{{volcano-version}}"]]
 
   :plugins [{{#garden?}}[lein-garden "{{lein-garden-version}}"]{{/garden?}}{{#less?}}
-            [lein-less "1.7.5"]{{/less?}}
-            [lein-shell "0.5.0"]]
-
+            [lein-less "1.7.5"]{{/less?}}]
   :source-paths ["src"]
-
 {{#garden?}}
-
   :garden {:builds [{:id           "{{name}}"
                      :source-paths ["src"]
                      :stylesheet   {{name}}.css.core/styles
@@ -26,9 +22,4 @@
          :target-path  "resources/css"}
 {{/less?}}
 
-  :clean-targets ^{:protect false} ["resources/js" "target" {{#garden?}}"resources/css"{{/garden?}}{{#less?}}"resources/css"{{/less?}}]
-
-  :profiles {:dev {:prep-tasks [{{#garden?}}["garden" "once"]{{/garden?}}
-                                {{#less?}}["less" "once"] {{/less?}}
-                                ["run" "-m" "shadow.cljs.devtools.cli" "release" "build"]
-                                ["shell" "node" "target/build"]]}})
+  :clean-targets ^{:protect false} ["resources/js" "target" {{#garden?}}"resources/css"{{/garden?}}{{#less?}}"resources/css"{{/less?}}])
