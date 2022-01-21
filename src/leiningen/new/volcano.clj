@@ -25,12 +25,12 @@
               :less?                      (= css :less)
               :garden?                    (= css :garden)
               :css?                       (= css :none)
-              :volcano-version            "0.1.2"
+              :volcano-version            "0.2.0"
               :reagent-version            "0.10.0"
               :bidi-version               "2.1.6"
               :accountant-version         "0.2.5"
               :devtools-version           "0.9.10"
-              :shadow-cljs-version        "2.8.109"
+              :shadow-cljs-version        "2.16.12"
               :react-version              "^16.13.1"
               :react-dom-version          "^16.13.1"
               :create-react-class-version "^15.6.3"
@@ -40,11 +40,11 @@
     (main/info "Generating fresh 'lein new' Volcano project.")
     (->files data
              ["src/{{sanitized}}/dev.cljs" (render "dev.cljs" data)]
-             ["src/{{sanitized}}/build.clj" (render "build.clj" data)]
-             ["src/{{sanitized}}/config.cljc" (render "config.cljc" data)]
-             ["src/{{sanitized}}/routes.cljc" (render "routes.cljc" data)]
-             ["src/{{sanitized}}/pages/contact.cljc" (render "pages/contact.cljc" data)]
-             ["src/{{sanitized}}/pages/index.cljc" (render "pages/index.cljc" data)]
+             ["src/{{sanitized}}/build.cljs" (render "build.cljs" data)]
+             ["src/{{sanitized}}/config.cljs" (render "config.cljs" data)]
+             ["src/{{sanitized}}/routes.cljs" (render "routes.cljs" data)]
+             ["src/{{sanitized}}/pages/contact.cljs" (render "pages/contact.cljs" data)]
+             ["src/{{sanitized}}/pages/index.cljs" (render "pages/index.cljs" data)]
              (case css
                :garden ["src/{{sanitized}}/css/core.clj" (render "css/core.clj" data)]
                :less ["less/{{name}}.less" (render "default.less" data)]

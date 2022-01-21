@@ -1,4 +1,4 @@
-(defproject volcano/lein-template "0.1.3"
+(defproject volcano/lein-template "0.2.0-SNAPSHOT"
   :description "Leiningen template for a static web generated with Volcano"
   :url "https://github.com/OrgPad-com/volcano-template"
   :license {:name "The MIT License"

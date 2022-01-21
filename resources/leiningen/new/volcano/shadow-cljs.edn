@@ -5,12 +5,17 @@
                 [binaryage/devtools "{{devtools-version}}"]
                 [orgpad/volcano "{{volcano-version}}"]]
  :nrepl        {:port 9500}
- :builds       {:web {:target     :browser
-                      :output-dir "resources/js"
-                      :asset-path "/js"
-                      :modules    {:main {:init-fn {{name}}.dev/init}}
-                      :devtools   {:http-root      "resources"
-                                   :http-port      3500
-                                   :after-load     {{name}}.dev/mount-root
-                                   :watch-dir      "resources"
-                                   :browser-inject :main}}}}
+ :builds       {:web   {:target     :browser
+                        :output-dir "resources/js"
+                        :asset-path "/js"
+                        :modules    {:main {:init-fn {{name}}.dev/init}}
+                        :devtools   {:http-root  "resources"
+                                     :http-port  3500
+                                     :after-load {{name}}.dev/mount-root
+                                                 :watch-dir "resources"
+                                                 :browser-inject :main}}
+                :build {:target           :node-script
+                        :main             {{name}}.build/build
+                        :output-to        "target/build.js"
+                        :devtools         {:autoload true}
+                        :compiler-options {:optimizations :simple}}}}
